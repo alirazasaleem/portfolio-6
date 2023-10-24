@@ -1,0 +1,341 @@
+ @import url('https://fonts.googleapis.com/css?family=Saira+Semi+Condensed:300,400,600,700');
+ * {
+   font-family: 'Saira Semi Condensed', sans-serif;
+ }
+ body{
+   background-color: #f8f8f8;
+ }
+ /* Header */
+ /* Desktop and Large Screen Navbar End */
+
+ .navbar-default {
+   background-color: white;
+   position: fixed;
+   top: 0;
+   left: 0;
+   z-index: 2;
+   width: 100%;
+ }
+
+ .navbar {
+   margin-bottom: 0px;
+ }
+ .navbar-default .navbar-brand{
+   color: var(--main-color);
+ }
+ .navbar-default .navbar-nav > li > a:hover{
+   color: var(--main-color);
+ }
+ @media (min-width:992px) {
+   .side-bar-menu-icon {
+     position: absolute;
+     top: 50%;
+     right: 10px;
+     transform: translateY(-50%);
+     cursor: pointer;
+   }
+   .side-bar-menu-icon .fa {
+     color: #777
+   }
+ }
+ /* Desktop and Large Screen Navbar end */
+
+ .logo-menu {
+   position: fixed;
+   ;
+   top: 0;
+   left: 0;
+   width: 100%;
+   z-index: 1;
+   display: none;
+ }
+
+ @media (max-width:991px) {
+   .logo-menu {
+     display: block;
+     background-color: white;
+   }
+   .logo {
+     display: inline-block;
+     text-align: left;
+   }
+   .logo a {
+     text-transform: uppercase;
+     color: #777;
+     margin-top: 2px;
+   }
+   .menu-icon {
+     display: inline-block;
+     float: right;
+     margin-top: 13px;
+     margin-right: 10px;
+   }
+   .menu-icon .fa.fa-bars {
+     color: #777;
+     cursor: pointer;
+   }
+ }
+ /* Side NavBar */
+
+ @keyframes SlideRight {
+   from {
+     left: 100%;
+     width: 0;
+   }
+   to {
+     left: 0;
+     width: 100%;
+   }
+ }
+
+ .side-menu-bar {
+   display: none;
+   animation-name: SlideRight;
+   animation-duration: 1s;
+   animation-iteration-count: 1;
+   position: fixed;
+   width: 100%;
+   height: 100%;
+   z-index: 3;
+   top: 0;
+   background-color: rgba(0, 0, 0, 0.8);
+ }
+
+ .side-menu-bar ul {
+   height: 100%;
+   width: 100%;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   list-style: none;
+ }
+
+ .side-menu-bar li {
+   transform: translateX(-10%);
+ }
+
+ .side-menu-bar li a {
+   text-decoration: none;
+   font-weight: 300;
+   color: white;
+   font-size: 40px;
+   text-transform: uppercase;
+ }
+ .side-menu-bar li a:hover,
+ .side-menu-bar li a:active,
+ .side-menu-bar li a:visited{
+   color: var(--main-color);
+   background-color: transparent !important;
+ }
+ .closebtn {
+   position: absolute;
+   top: 10px;
+   right: 10px;
+   cursor: pointer;
+ }
+
+ .closebtn .fa.fa-times {
+   font-weight: 300;
+   -webkit-text-stroke: 1px white;
+   color: white;
+ }
+ /* Side NavBar End */
+
+ header {
+   width: 95%;
+   position: relative;
+   margin: 0 auto;
+   background-image: url('../image/header-bg.jpg');
+   background-repeat: no-repeat;
+   background-size: cover;
+   background-position: center;
+ }
+
+ @media (max-width:768px) {
+   header {
+     width: 100%;
+   }
+ }
+
+ header::after {
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   content: '';
+   background-color: rgba(0, 0, 0, 0.3);
+ }
+
+ .header-content {
+   word-spacing: 999999px;
+   position: relative;
+   z-index: 1;
+   height: 100%;
+   display: flex;
+ }
+
+ .header-content h1 {
+   text-align: center;
+   color: white;
+   align-self: center;
+   font-size: 50px;
+   font-weight: 700;
+   text-transform: uppercase;
+ }
+ .header-content h1 span{
+   color: var(--main-color);
+ }
+ /* Header End */
+ /* XXX: About Section */
+
+ .about-img-section {
+   padding: 4px;
+   border: 1px solid #777;
+ }
+
+ .about-img {
+   background-position: center;
+   background-repeat: no-repeat;
+   background-size: cover;
+   background-image: url('../image/about-bg.jpg');
+   box-shadow: 0 0 100px black inset;
+ }
+
+ .about-text h1 {
+   margin-bottom: 1em;
+   font-size: 50px;
+   text-align: center;
+   color: var(--main-color);
+ }
+
+ .about-text p {
+   line-height: 200%;
+   text-shadow: 1px 1px 2px black;
+ }
+ /* XXX: About Section End */
+ /* XXX: Portfolio */
+
+ .img-gallery {
+   padding: 0;
+   height: 300px;
+   overflow: hidden;
+   padding: 3px;
+ }
+
+ .img-gallery>div {
+   background-image: url('../image/1.jpg');
+   background-position: center;
+   background-size: cover;
+   background-repeat: no-repeat;
+   height: 100%;
+   transition: 0.5s ease-in-out;
+ }
+
+ .img-gallery:hover {
+   cursor: pointer;
+ }
+
+ .img-gallery>div:hover {
+   transform: scale(1.5);
+ }
+
+ .section-heading {
+   margin-bottom: 1em;
+   text-align: center;
+ }
+
+ .section-heading h1 {
+   font-size: 50px;
+   color: var(--main-color);
+ }
+
+ .preview-img {
+   display: none;
+   width: 100%;
+   height: 100%;
+   position: fixed;
+   top: 0;
+   left: 0;
+   z-index: 10;
+   background-color: rgba(0, 0, 0, 0.5);
+ }
+
+ .preview-img .fa.fa-times-circle {
+   position: absolute;
+   top: 10px;
+   right: 10px;
+   color: white;
+   cursor: pointer;
+ }
+
+ .preview-img img {
+   max-width: 90%;
+   max-height: 80%;
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+ }
+ /* XXX: Portfolio End */
+ /* XXX: Contact Us */
+
+ .contact-form .input-text{
+   width: 100%;
+   padding: 10px 17px;
+   font-size: 13px;
+   border: 1px solid #e8e7e7;
+   outline: none;
+   resize: none;
+   color: #6c6c6c;
+   border-radius: 3px;
+ }
+ .contact-form textarea{
+   min-height: 150px;
+ }
+ .submit-btn{
+   text-align: center;
+ }
+ .submit-btn button[type="submit"]{
+   padding: 0.5em 3em;
+   background-color: var(--main-color);
+   color: white;
+   border: 1px solid var(--main-color);
+ }
+ .follow-heading>h1{
+   margin-top: 0;
+   color: var(--main-color);
+ }
+ .social-icon{
+   text-align: center;
+ }
+ .social-icon .fa{
+   font-size: 24px;
+   padding: 10px;
+   cursor: pointer;
+ }
+ .social-icon .fa-facebook {
+  background: #3B5998;
+  color: white;
+  padding: 10px 14px;
+}
+
+.social-icon .fa-twitter {
+  background: #55ACEE;
+  color: white;
+}
+
+.social-icon .fa-google-plus {
+  background: #dd4b39;
+  color: white;
+}
+.social-icon .fa-youtube {
+  background: #bb0000;
+  color: white;
+}
+.social-icon .fa-instagram {
+  background: #125688;
+  color: white;
+}
+ /* XXX: Contact Us End */
